@@ -1,0 +1,212 @@
+
+#dom{
+    position: fixed;
+    width: 90%;
+    max-width: 900px;
+    border-left: 4px solid #3c1eb6;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 200px;
+    display: none;
+    background-color: #FFFFF4;
+
+}
+#toolbar{
+    padding: 10px 10px;
+    background-color: #ffd056;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-top: solid #b81900 4px;
+    z-index: 1;
+    height: 200px;
+
+}
+#buttons{
+    width: 50%;
+    height: 100%;
+
+}
+.addEdit{
+    position: absolute;
+    background-color: #080808;
+    height: inherit;
+    width: 30px;
+    left: -30px;
+}
+.actions{
+    margin-left: 0px;
+}
+#logContainer{
+    float: right;
+    width: 50%;
+    padding-top: 0;
+}
+#log{
+    background-color: #FFFFF4;
+    height: 100px;
+    border: solid 3px #DEAB12;
+    overflow: scroll;
+}
+.time{
+    font-weight: bold;
+    margin-right: 10px;
+}
+#main{
+    margin: 0; padding: 0;
+    position: absolute;
+    background-color: #FFFFE9;
+    top: 0px;
+    min-width: 3000px;
+    min-height: 3000px;
+    //background-color: #adff99;
+    text-align: center;
+}
+
+.node{
+    border: solid 4px #141313;
+    width: 130px;
+    margin: auto;
+}
+
+
+.profileImg{
+    margin: 5px;
+    border: solid 2px black ;
+    height: 100px;
+    background-color: #fefffd;
+    overflow: hidden;
+
+
+}
+.profileImg img{
+    width: 100%;
+    overflow: hidden;
+
+
+
+
+}
+#uploadedImg{
+    width: 50px;
+    float: right;
+}
+.node{
+    background-color: #E4B320;
+}
+
+.selected{
+    border: solid 4px #b60000;
+    box-shadow: 5px 5px;
+}
+
+
+
+/* this code styles and positions the nodes in tree format
+ it was taken and reapportioned from the link below*/
+/*Source http://thecodeplayer.com/walkthrough/css3-family-tree*/
+.tree ul {
+    padding-top: 20px; position: relative;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li {
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+
+.tree li::before, .tree li::after{
+    content: '';
+    position: absolute; top: 0; right: 50%;
+    border-top: 3px solid #ccc;
+    width: 50%; height: 20px;
+}
+.tree li::after{
+    right: auto; left: 50%;
+    border-left: 3px solid #ccc;
+}
+
+
+
+
+/*We need to remove left-right connectors from elements without
+any siblings*/
+.tree li:only-child::after, .tree li:only-child::before {
+    display: none;
+}
+
+/*Remove space from the top of single children*/
+.tree li:only-child{ padding-top: 0;}
+
+/*Remove left connector from first child and
+right connector from last child*/
+.tree li:first-child::before, .tree li:last-child::after{
+    border: 0 none;
+}
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before{
+    border-right: 3px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 3px solid #ccc;
+    width: 0; height: 20px;
+}
+
+.tree li a{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    display: inline-block;
+
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.tree li a:hover, .tree li a:hover+ul li a {
+    background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before{
+    border-color:  #94a0b4;
+}
+
+/*Thats all. I hope you enjoyed it.
+Th

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.css" />
+    <title></title>
+</head>
+<body>
+
+
+<div id="domContainer"><textarea id="dom"></textarea></div>
+
+
+<!--tree will go hear-->
+<div id="main">
+    <div class="tree">
+        <ul>
+            <li>
+                <div class="node" >
+                    <div class="addEdit"></div>
+                    <div class="profileImg">
+                        <img src="../imgs/default.jpg" alt="your image"/>
+                    </div>
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td class="name-field"></td>
+                        </tr>
+                        <tr>
+                            <td>DOB:</td>
+                            <td class="dob-field"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="toolbar">
+    <div id="logContainer">
+        <h2>Event Log</h2>
+        <div id="log"></div>
+    </div>
+    <div id="buttons">
+        <div class="btn-group actions">
+            <button id="add" class="btn btn-default">Add Child</button>
+            <button id="edit" class="btn btn-default">Edit Node</button>
+            <button id="remove" class="btn btn-default">Remove  Node</button>
+            <button id="viewDom" class="btn btn-default">View/Hide Dom Tree</button>
+        </div>
+        <br>
+        <button id="previous-sib" class="btn btn-default">Previous Sibling</button>
+        <div class="btn-group-vertical">
+            <button id="upGen" class="btn btn-default">Previous Generation</button>
+            <button id="downGen" class="btn btn-default">Next Generation</button>
+        </div>
+        <button id="next-sib" class="btn btn-default">Next Sibling</button>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/bootbox.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
