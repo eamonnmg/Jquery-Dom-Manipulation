@@ -250,7 +250,7 @@ function bootboxAdd(target){
             '<div class="col-md-4"> ' +
             '<form id="imgUploadForm" runat="server">'+
             '<input type="file" id="imgInp" />' +
-            '<img id="uploadedImg" src="../imgs/default.jpg" alt="your image"/>' +
+            '<img id="uploadedImg" src="imgs/default.jpg" alt="your image"/>' +
             '<input type="button" id="removeImg" value="Remove Image" />'+
             '</form>' +
             '</div> </div>' +
@@ -280,7 +280,7 @@ function bootboxAdd(target){
     //remove image event
     $("#removeImg").click(function(){
         //reset img source to defualt
-        $('#uploadedImg').attr('src','../imgs/default.jpg');
+        $('#uploadedImg').attr('src','imgs/default.jpg');
     });
 
 }
@@ -351,7 +351,7 @@ function bootboxEdit(target){
     //remove image event
     $("#removeImg").click(function(){
         //reset img source to defualt
-        $('#uploadedImg').attr('src','../imgs/default.jpg');
+        $('#uploadedImg').attr('src','imgs/default.jpg');
     });
 
 
